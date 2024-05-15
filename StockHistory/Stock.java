@@ -20,8 +20,24 @@ public class Stock
             int day = prices.getDate().getTime().getDay();
             
             
+            String yearString = "20" + String.valueOf(year).substring(1);
+            String monthString = "";
+            String dayString = "";
+            if (month < 10) {
+                monthString = "0" + String.valueOf(month);
+            } else {
+                monthString = String.valueOf(month);
+            }
             
-            System.out.println(year + "-" + month + "-" + day + "," + price);
+            if (day < 10) {
+                dayString = "0" + String.valueOf(day);
+            } else {
+                dayString = String.valueOf(day);
+            }
+            
+            
+            
+            System.out.println(yearString + "-" + monthString + "-" + dayString + "," + price);
             
         }
     }
